@@ -1,0 +1,94 @@
+.superhero {
+  margin: 0 auto;
+  font-size: 1.5rem;
+
+  &__close {
+    float: right;
+    background-color: pink;
+    border: none;
+    margin-left: 85%;
+    cursor: pointer;
+  }
+
+  &__edit {
+    position: absolute;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 15%;
+  }
+
+  &__carousel {
+    max-width: 33%;
+    margin: 0 auto;
+  }
+
+  &__story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__name {
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  &__preface {
+    margin-bottom: 10px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__remove {
+    &:hover {
+      background-color: purple;
+    }
+  }
+
+  &__configuire {
+    &:hover {
+      background-color: blueviolet;
+    }
+  }
+}
+
+.accent-text {
+  color: pink;
+  text-decoration: underline;
+}
+
+.button {
+  display: block;
+  margin: 15px auto 0;
+  padding: 5px;
+  border-color: grey;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.input {
+  padding: 5px;
+  color: black;
+  background-color: pink;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}

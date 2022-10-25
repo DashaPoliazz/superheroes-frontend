@@ -1,0 +1,26 @@
+@import url("./reset.css");
+@import url("./normalize.css");
+
+html {
+  font-family: "Bebas Neue", cursive;
+  color: white;
+}
+
+body {
+  overflow: hidden;
+  background: black;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}

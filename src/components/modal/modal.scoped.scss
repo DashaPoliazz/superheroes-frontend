@@ -1,0 +1,106 @@
+.modal {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+
+  &__header {
+    text-align: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  &__button-close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: pink;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.3s linear;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+
+  &__form {
+    justify-content: center;
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999999;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid pink;
+    height: 75%;
+    width: 65%;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__name {
+    margin-bottom: 20px;
+    width: 50%;
+    height: 45px;
+    padding: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__description {
+    margin-bottom: 10px;
+    border-radius: 25px;
+    padding: 10px;
+    width: 50%;
+    height: 45px;
+    border: none;
+    background-color: pink;
+    outline: none;
+    resize: none;
+  }
+
+  &__button {
+    margin-top: 30px;
+    border: none;
+    padding: 10px 20px;
+    background-color: pink;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.input {
+  color: black;
+  background-color: pink;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}

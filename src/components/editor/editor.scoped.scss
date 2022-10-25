@@ -1,0 +1,35 @@
+.superhero {
+  &__editor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    align-items: center;
+  }
+
+  &__current-info {
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  &__edit-name {
+    background-color: pink;
+    padding: 5px;
+    border-radius: 15px;
+    margin-right: 5px;
+    outline: none;
+    margin-bottom: 15px;
+  }
+
+  &__button-name {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    transition: all 0.3s linear;
+
+    &:hover {
+      background-color: pink;
+      color: white;
+    }
+  }
+}

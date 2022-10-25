@@ -1,0 +1,28 @@
+import { useDispatch } from "react-redux";
+import { bindActionCreators } from "@reduxjs/toolkit";
+import { actions } from "../store/slices/superheroesSlice";
+import { modaSliceActions } from "../store/slices/modalSlice";
+import {
+  loadSuperheroes,
+  addNewSuperhero,
+  removeSuperhero,
+  updateSuperhero,
+} from "../store/slices/superheroesSlice";
+
+import { setCurrentImage } from "../store/slices/fileSlice";
+
+const actionsToBind = {
+  ...actions,
+  ...modaSliceActions,
+  loadSuperheroes,
+  addNewSuperhero,
+  removeSuperhero,
+  updateSuperhero,
+  setCurrentImage,
+};
+
+export const useActions = () => {
+  const dispatch = useDispatch();
+
+  return bindActionCreators(actionsToBind, dispatch);
+};
