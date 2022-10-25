@@ -20,6 +20,8 @@ export const setCurrentImage = createAsyncThunk(
       options.superheroId,
     );
 
+    console.log(response);
+
     return response.data;
   },
 );
