@@ -9,8 +9,8 @@
 <h4 align="center">A Superheroes CRUD application build on <a href="https://reactjs.org/" target="_blank">React</a>.</h4>
 
 <p align="center">
-  <a href="https://dashapoliazz.github.io/react-pizza-v2/">
-    <img src="https://img.shields.io/badge/demo-online-green.svg"
+  <a href="https://prnt.sc/QSdk56yhAqVJ">
+    <img src="https://prnt.sc/QSdk56yhAqVJ"
          alt="Gitter">
   </a>
   
