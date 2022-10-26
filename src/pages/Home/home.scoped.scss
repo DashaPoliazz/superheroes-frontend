@@ -2,23 +2,35 @@
   height: 100vh;
 }
 
-.add {
+.button {
+  transform: rotate(2deg);
+  padding: 15px 10px;
   margin: 25px auto;
-  display: block;
-  background-color: pink;
-  color: black;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 10px;
+  background: white;
+  border: 1px solid #222;
+  box-shadow: 3px 3px 0 #222;
   transition: all 0.3s linear;
   cursor: pointer;
+  text-transform: uppercase;
 
   &:hover {
-    background-color: deeppink;
+    background-color: red;
   }
 }
 
 .pagination {
   display: flex;
   justify-content: space-evenly;
+
+  &__page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    background-color: white;
+    padding: 2px 20px;
+    border-radius: 100%;
+  }
 }

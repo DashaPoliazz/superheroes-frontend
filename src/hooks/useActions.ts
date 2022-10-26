@@ -9,7 +9,7 @@ import {
   updateSuperhero,
 } from "../store/slices/superheroesSlice";
 
-import { setCurrentImage } from "../store/slices/fileSlice";
+import { setCurrentImage, removeCurrentImage } from "../store/slices/fileSlice";
 
 const actionsToBind = {
   ...actions,
@@ -19,6 +19,7 @@ const actionsToBind = {
   removeSuperhero,
   updateSuperhero,
   setCurrentImage,
+  removeCurrentImage,
 };
 
 export const useActions = () => {

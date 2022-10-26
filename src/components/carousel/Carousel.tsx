@@ -14,7 +14,7 @@ export const CCarousel = () => {
     <Carousel>
       {currentSuperhero?.Images.map(image => (
         <div>
-          <img src={image} />
+          <img src={image.imageUrl} />
         </div>
       ))}
     </Carousel>

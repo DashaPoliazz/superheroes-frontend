@@ -2,13 +2,15 @@
 @import url("./normalize.css");
 
 html {
-  font-family: "Bebas Neue", cursive;
-  color: white;
+  font-family: "Permanent Marker", cursive;
+  color: black;
 }
 
 body {
   overflow: hidden;
-  background: black;
+  background: url("../../assets/images/96664b25c9577e001de75564227ca134.jpg")
+    center center / cover no-repeat;
+  backdrop-filter: blur(8px);
 }
 
 .container {

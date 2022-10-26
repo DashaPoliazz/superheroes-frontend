@@ -13,7 +13,7 @@
   }
 
   &__edit-name {
-    background-color: pink;
+    background-color: white;
     padding: 5px;
     border-radius: 15px;
     margin-right: 5px;
@@ -28,7 +28,7 @@
     transition: all 0.3s linear;
 
     &:hover {
-      background-color: pink;
+      background-color: red;
       color: white;
     }
   }

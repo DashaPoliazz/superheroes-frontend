@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { create } from "domain";
 import { fileService } from "../../services/FileService";
-import { IFileResponse } from "../../types/FileResponse";
+import { IDeleteOptions, IFileResponse } from "../../types/FileResponse";
 
 interface ImageOptions {
   imageToSet: File;
@@ -21,6 +22,17 @@ export const setCurrentImage = createAsyncThunk(
     );
 
     console.log(response);
+
+    return response.data;
+  },
+);
+
+export const removeCurrentImage = createAsyncThunk(
+  "api/removeImage",
+  async (options: IDeleteOptions) => {
+    const response = await fileService.removeImage(options);
+
+    console.log(response.data);
 
     return response.data;
   },
@@ -50,6 +62,16 @@ const fileSlice = createSlice({
       },
     );
     builder.addCase(setCurrentImage.rejected, (state: InitialState) => {
+      state.isLoading = false;
+    });
+    // Remove current Image
+    builder.addCase(removeCurrentImage.pending, (state: InitialState) => {
+      state.isLoading = true;
+    });
+    builder.addCase(removeCurrentImage.fulfilled, (state: InitialState) => {
+      state.isLoading = false;
+    });
+    builder.addCase(removeCurrentImage.rejected, (state: InitialState) => {
       state.isLoading = false;
     });
   },

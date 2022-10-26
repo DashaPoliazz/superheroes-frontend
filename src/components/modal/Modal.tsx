@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useActions } from "../../hooks/useActions";
 import { useAppSelector } from "../../hooks/useAppSelector";
+import { IPicture } from "../../types/superhero";
 import { Loader } from "../loader/Loader";
 
 import "./modal.scoped.scss";
@@ -32,7 +33,7 @@ export const Modal = () => {
       superpowers: ["superpowers"],
       catch_phrase: catchphrase,
       currentImage: null,
-      Images: ["image1", "image2"],
+      Images: [],
     };
 
     addNewSuperhero(newSuperhero);

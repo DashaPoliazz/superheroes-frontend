@@ -1,18 +1,40 @@
+.superhero-section {
+  height: 100vh;
+}
+
 .superhero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
   font-size: 1.5rem;
 
   &__close {
     float: right;
-    background-color: pink;
+    background-color: white;
     border: none;
     margin-left: 85%;
     cursor: pointer;
+    transition: all 0.3s linear;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+
+  &__file-manager {
+    display: flex;
+    align-items: center;
   }
 
   &__edit {
     position: absolute;
-    background-color: gray;
+    background-color: white;
+    border-width: 5px 3px 3px 5px;
+    border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+    transform: rotate(1deg);
+    padding: 25px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,6 +49,14 @@
     margin: 0 auto;
   }
 
+  &__info {
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    border-width: 3px 4px 3px 5px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  }
+
   &__story {
     display: flex;
     flex-direction: column;
@@ -35,14 +65,17 @@
   }
 
   &__name {
-    text-align: center;
-    text-decoration: underline;
+    display: inline-block;
+    color: white;
+    background-color: red;
+    margin-bottom: 0;
   }
 
   &__title {
     margin-top: 10px;
-    margin-bottom: 25px;
     text-align: center;
+    margin-bottom: 5px;
+    font-size: 2rem;
   }
 
   &__preface {
@@ -51,44 +84,89 @@
 
   &__buttons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   &__remove {
+    margin-top: 2px !important;
+
     &:hover {
-      background-color: purple;
+      background-color: red;
     }
   }
 
   &__configuire {
+    margin-top: 2px !important;
+
     &:hover {
-      background-color: blueviolet;
+      background-color: red;
     }
   }
 }
 
 .accent-text {
-  color: pink;
+  color: red;
   text-decoration: underline;
 }
 
 .button {
-  display: block;
-  margin: 15px auto 0;
-  padding: 5px;
-  border-color: grey;
-  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 25px;
+  background: white;
+  border: 1px solid #222;
+  box-shadow: 3px 3px 0 #222;
   transition: all 0.3s linear;
-  outline: none;
   cursor: pointer;
-  transition: all 0.3s linear;
-}
+  text-transform: uppercase;
 
+  &:hover {
+    background-color: red;
+  }
+}
 .input {
   padding: 5px;
   color: black;
-  background-color: pink;
+  background-color: red;
   border-radius: 25px;
   border: none;
   outline: none;
+}
+
+.file-input__input {
+  display: none;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.file-input__label {
+  min-width: 150px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 2px solid red;
+}
+
+.file-input__label:hover {
+  background-color: rgba(221, 60, 60, 0.5);
+}
+
+.file-input__label svg {
+  height: 16px;
+  margin-right: 4px;
+}
+
+.file-input {
+  display: flex;
+  justify-content: center;
 }

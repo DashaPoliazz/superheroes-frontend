@@ -4,7 +4,6 @@ import { ISuperhero } from "../../types/superhero";
 import { useNavigate } from "react-router-dom";
 
 import "./superheroCard.scoped.scss";
-import { useState } from "react";
 import { useAppSelector } from "../../hooks/useAppSelector";
 
 interface Props {
@@ -12,15 +11,14 @@ interface Props {
 }
 
 export const SuperheroCard: React.FC<Props> = ({ superHeroData }) => {
-  const [image, setImage] = useState<File>();
-
+  const { nickname, _id, currentImage } = superHeroData;
+  
   const navigate = useNavigate();
 
   const { setActiveSuperhero, setCurrentImage } = useActions();
 
   const { isLoading } = useAppSelector(state => state.files);
 
-  const { nickname, origin_description, _id, currentImage } = superHeroData;
 
   const onChangeHandler = (e: any) => {
     console.log(e.target.files[0]);
@@ -33,14 +31,16 @@ export const SuperheroCard: React.FC<Props> = ({ superHeroData }) => {
     }
   };
 
+  console.log(superHeroData);
+
   return (
     <a href="" className="card">
       <img
         src={
-          (isLoading
+          isLoading
             ? "https://media1.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif"
-            : currentImage) ||
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+            : currentImage?.imageUrl ||
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
         }
         className="card__image"
         alt=""
@@ -91,7 +91,7 @@ export const SuperheroCard: React.FC<Props> = ({ superHeroData }) => {
             }
             navigate("/superhero");
           }}
-          className="button card__button"
+          className="button  card__button"
         >
           Show details
         </button>

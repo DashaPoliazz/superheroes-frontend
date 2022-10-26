@@ -5,7 +5,6 @@ import { Modal } from "../../components/modal/Modal";
 import { SuperheroCard } from "../../components/superheroCard/SuperheroCard";
 import { useActions } from "../../hooks/useActions";
 import { useAppSelector } from "../../hooks/useAppSelector";
-
 import "./home.scoped.scss";
 
 export const Home = () => {
@@ -19,6 +18,8 @@ export const Home = () => {
 
   useEffect(() => {
     loadSuperheroes();
+
+    console.log(superheroes);
   }, []);
 
   if (isLoading) {
@@ -37,13 +38,13 @@ export const Home = () => {
       <Header />
 
       {isModal && <Modal />}
-      <button onClick={e => toggleModal()} className="add">
+      <button onClick={e => toggleModal()} className="button add">
         Add new superhero
       </button>
       <div className="pagination">
         <button
           onClick={e => setCurrentPage(currentPage - 1)}
-          className="pagination__button"
+          className="button pagination__button"
           disabled={currentPage === 1}
         >
           Prev
@@ -51,7 +52,7 @@ export const Home = () => {
         <span className="pagination__page">{currentPage}</span>
         <button
           onClick={e => setCurrentPage(currentPage + 1)}
-          className="pagination__button"
+          className="button pagination__button"
           disabled={Math.ceil(superheroes.length / itemsPerPage) <= currentPage}
         >
           Next

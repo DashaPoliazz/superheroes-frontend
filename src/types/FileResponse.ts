@@ -1,3 +1,10 @@
+import { ISuperhero } from "./superhero";
+
+export interface IDeleteOptions {
+  imagePublicId: string;
+  superheroToUpdate: ISuperhero;
+}
+
 export interface IFileResponse {
   asset_id: string;
   public_id: string;

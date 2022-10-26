@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <header className="header">
       <Link to="/" className="header__logo">
-        Superheroes
+        !Superheroes
       </Link>
     </header>
   );

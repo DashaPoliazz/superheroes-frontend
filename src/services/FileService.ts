@@ -1,6 +1,7 @@
 import { $axios } from "../api/api";
 import { AxiosResponse } from "axios";
-import { IFileResponse } from "../types/FileResponse";
+import { IDeleteOptions, IFileResponse } from "../types/FileResponse";
+import { ISuperhero } from "../types/superhero";
 
 class FileService {
   setImage(
@@ -13,6 +14,12 @@ class FileService {
     formData.append("superheroId", superheroId);
 
     return $axios.post<IFileResponse>("/image", formData);
+  }
+
+  removeImage(options: IDeleteOptions): Promise<AxiosResponse<ISuperhero>> {
+    return $axios.delete<ISuperhero>("/image", {
+      data: options,
+    });
   }
 }
 

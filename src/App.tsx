@@ -7,10 +7,12 @@ import { Home } from "./pages/Home/Home";
 import { Superhero } from "./pages/Superhero/Superhero";
 import { Modal } from "./components/modal/Modal";
 import { Loader } from "./components/loader/Loader";
+import { useEffect } from "react";
+import { fileService } from "./services/FileService";
 
 function App() {
   const { isModal } = useAppSelector(state => state.modal);
-  const { isLoading } = useAppSelector(state => state.superheroes);
+  const { isLoading, superheroes } = useAppSelector(state => state.superheroes);
 
   return (
     <div className="container">
