@@ -22,7 +22,8 @@
   <a href="#how-to-use">How To Use</a> •
 </p>
 
-![screenshot](https://prnt.sc/M409lkQIIpoa)
+<img src="./assets/images/Screenshot_1.png"
+         alt="Superhero app">
 
 ## Key Features
 
