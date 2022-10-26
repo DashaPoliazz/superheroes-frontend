@@ -47,6 +47,18 @@ $ npm install
 
 # Run the app
 $ npm start
+
+# Clone repository with server
+$ git clone https://github.com/DashaPoliazz/superheroes-backend
+
+# Go into the repository
+$ cd superheroes-backend
+
+# Install dependencies
+$ npm install
+
+# Run the server
+$ npm run dev
 ```
 
 > **Note**
