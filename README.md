@@ -9,14 +9,6 @@
 <h4 align="center">A Superheroes CRUD application build on <a href="https://reactjs.org/" target="_blank">React</a>.</h4>
 
 <p align="center">
-  <a href="https://dashapoliazz.github.io/react-pizza-v2/">
-    <img src="https://img.shields.io/badge/demo-online-green.svg"
-         alt="Gitter">
-  </a>
-  
-</p>
-
-<p align="center">
     
   •<a href="#key-features">Technology stack</a> •
   <a href="#how-to-use">How To Use</a> •
