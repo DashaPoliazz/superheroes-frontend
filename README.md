@@ -36,18 +36,6 @@
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
-# Clone this repository
-$ git clone https://github.com/DashaPoliazz/superheroes-frontend
-
-# Go into the repository
-$ cd superheroes-frontend
-
-# Install dependencies
-$ npm install
-
-# Run the app
-$ npm start
-
 # Clone repository with server
 $ git clone https://github.com/DashaPoliazz/superheroes-backend
 
@@ -59,6 +47,18 @@ $ npm install
 
 # Run the server
 $ npm run dev
+
+# Clone this repository
+$ git clone https://github.com/DashaPoliazz/superheroes-frontend
+
+# Go into the repository
+$ cd superheroes-frontend
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm start
 ```
 
 > **Note**
