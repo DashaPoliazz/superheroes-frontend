@@ -12,15 +12,18 @@ export const Home = () => {
 
   const { isModal } = useAppSelector(state => state.modal);
   const { isLoading, superheroes } = useAppSelector(state => state.superheroes);
+  const { isLoading: isFileLoading } = useAppSelector(state => state.files);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(5);
 
   useEffect(() => {
     loadSuperheroes();
-
-    console.log(superheroes);
   }, []);
+
+  useEffect(() => {
+    loadSuperheroes();
+  }, [isFileLoading]);
 
   if (isLoading) {
     return <Loader />;
@@ -59,9 +62,13 @@ export const Home = () => {
         </button>
       </div>
       <div className="cards">
-        {paginatedSupeheroes().map(superhero => (
-          <SuperheroCard key={superhero._id} superHeroData={superhero} />
-        ))}
+        {superheroes.length > 0 ? (
+          paginatedSupeheroes().map(superhero => (
+            <SuperheroCard key={superhero._id} superHeroData={superhero} />
+          ))
+        ) : (
+          <h1>Please, add superhero</h1>
+        )}
       </div>
     </div>
   );

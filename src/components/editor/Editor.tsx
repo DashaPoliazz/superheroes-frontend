@@ -37,8 +37,6 @@ export const Editor: React.FC<Props> = ({ keyToChange }) => {
             [keyToChange]: updatedKey,
           };
 
-    console.log(preparedSuperhero);
-
     updateSuperhero(preparedSuperhero);
   };
 

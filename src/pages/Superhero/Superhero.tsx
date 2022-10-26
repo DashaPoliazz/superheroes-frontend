@@ -72,6 +72,8 @@ export const Superhero = () => {
     return <Loader />;
   }
 
+  console.log(currentSuperhero.superpowers)
+
   return (
     <section className="superhero-section">
       {isModal && <Modal />}
@@ -87,7 +89,7 @@ export const Superhero = () => {
       }
       <Header />
       <div className="superhero">
-        <h1 className="superhero__name">name</h1>
+        <h1 className="superhero__name">{currentSuperhero.nickname}</h1>
         <div className="superhero__file-manager">
           <div className="file-input">
             <label className="file-input__label">
@@ -139,7 +141,7 @@ export const Superhero = () => {
             <br />
             <p className="superhero__abilities">
               <span className="accent-text">
-                { currentSuperhero.superpowers.join(', ') }
+                { currentSuperhero.superpowers }
               </span>
             </p>
           </div>

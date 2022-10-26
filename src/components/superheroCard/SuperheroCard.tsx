@@ -16,7 +16,6 @@ export const SuperheroCard: React.FC<Props> = ({ superHeroData }) => {
   const navigate = useNavigate();
 
   const { setActiveSuperhero, setCurrentImage } = useActions();
-
   const { isLoading } = useAppSelector(state => state.files);
 
 
@@ -31,10 +30,8 @@ export const SuperheroCard: React.FC<Props> = ({ superHeroData }) => {
     }
   };
 
-  console.log(superHeroData);
-
   return (
-    <a href="" className="card">
+    <div className="card">
       <img
         src={
           isLoading
@@ -96,6 +93,6 @@ export const SuperheroCard: React.FC<Props> = ({ superHeroData }) => {
           Show details
         </button>
       </div>
-    </a>
+    </div>
   );
 };

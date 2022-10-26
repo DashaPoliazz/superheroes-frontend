@@ -15,13 +15,7 @@ export const Modal = () => {
   const [catchphrase, setCatchphrase] = useState("");
   const [superpowers, setSuperpowers] = useState("");
 
-  const { activeSuperhero, superheroes, isLoading } = useAppSelector(
-    state => state.superheroes,
-  );
-
-  const currentSuperhero = superheroes.find(
-    superhero => superhero._id === activeSuperhero,
-  );
+  const { isLoading } = useAppSelector(state => state.superheroes);
 
   const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -30,14 +24,13 @@ export const Modal = () => {
       nickname: nickname,
       real_name: realname,
       origin_description: superheroDescription,
-      superpowers: ["superpowers"],
+      superpowers: [superpowers],
       catch_phrase: catchphrase,
       currentImage: null,
       Images: [],
     };
 
     addNewSuperhero(newSuperhero);
-
     toggleModal();
   };
 
